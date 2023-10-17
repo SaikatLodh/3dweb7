@@ -1,0 +1,782 @@
+@font-face {
+    font-family: Urbanist;
+    src: url(..//fonts/Urbanist\ \(1\)/);
+    font-family: fonts/Noto_Sans_KR;
+    src: url(..//fonts/Noto_Sans_KR/);
+}
+
+
+/* CSS Document */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.main {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color: #f1f1f1;
+}
+
+
+.page1 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #f1f1f1;
+}
+
+.page1>canvas {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+#loop {
+    display: flex;
+    white-space: nowrap;
+    overflow-y: auto;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    font-size: 100px;
+}
+
+#loop::-webkit-scrollbar {
+    display: none;
+}
+
+.rap {
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    animation-name: scroll;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.rap>h1 {
+    font-weight: 400;
+    font-family: "Urbanist";
+}
+
+.rap>h1>span {
+    -webkit-text-stroke: 1.2px #000;
+    color: transparent;
+    font-weight: 500;
+    font-family: "Urbanist";
+}
+
+@keyframes anim {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.page1>h3 {
+    position: absolute;
+    top: 55%;
+    font-family: "Urbanist";
+    font-weight: 400;
+    color: #7c7c7c;
+    left: 5%;
+    z-index: 10;
+}
+
+.page1>h4 {
+    position: absolute;
+    top: 62%;
+    left: 25%;
+    font-weight: 500;
+    font-family: "Urbanist";
+    z-index: 10;
+}
+
+.loop2>h3 {
+    position: absolute;
+    top: 55%;
+
+    font-weight: 400;
+    color: #7c7c7c;
+    right: 2%;
+    text-align: end;
+    font-family: "fonts/Noto_Sans_KR";
+    z-index: 10;
+}
+
+.loop2>h4 {
+    position: absolute;
+    top: 62%;
+    right: 2%;
+
+    font-weight: 500;
+    text-align: end;
+    font-family: "Urbanist";
+    z-index: 10;
+}
+
+
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 7%;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    padding: 0px 30px;
+}
+
+#nav>h3 {
+
+    font-weight: 400;
+    font-size: 22px;
+    font-family: "Urbanist";
+}
+
+#nav>button {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+}
+
+.page2 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #f1f1f1;
+}
+
+.page2>#right-text {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+.page2>#right-text>h3 {
+    font-weight: 400;
+    color: #7c7c7c;
+    font-family: "Urbanist";
+}
+
+.page2>#right-text>h2 {
+    line-height: 1.2;
+    font-size: 50px;
+    font-family: "Urbanist";
+}
+
+.page2>#left-text {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    text-align: end;
+}
+
+.page2>#left-text>h2 {
+    font-size: 50px;
+    line-height: 1.2;
+    font-family: "Urbanist";
+}
+
+.page2>#left-text>h3 {
+    color: #7c7c7c;
+    font-weight: 400;
+    font-family: "Urbanist";
+}
+
+.page3 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #f1f1f1;
+}
+
+
+.page3>#text1 {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+.page3>#text1>h3 {
+    color: #7c7c7c;
+    font-weight: 400;
+    font-family: "Urbanist";
+}
+
+.page3>#text1>h2 {
+    font-size: 60px;
+    line-height: 1;
+    font-family: "Urbanist";
+}
+
+.page3>#text2 {
+    position: absolute;
+    top: 55%;
+    right: 10%;
+    text-align: end;
+}
+
+.page3>#text2>p {
+    color: #7c7c7c;
+    font-weight: 400;
+    font-family: "Urbanist";
+}
+
+.page4 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #f1f1f1;
+}
+
+
+.page4>#text3 {
+    position: absolute;
+    top: 40%;
+    right: 10%;
+    text-align: end;
+}
+
+.page4>#text3>h3 {
+    color: #7c7c7c;
+    font-weight: 400;
+    font-family: "Urbanist";
+}
+
+.page4>#text3>h2 {
+    font-size: 70px;
+    font-family: "Urbanist";
+
+}
+
+.page5 {
+    width: 100%;
+    height: 93vh;
+    position: relative;
+    background-color: #f1f1f1;
+    padding-top: 100px;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.top h6 {
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Urbanist";
+    padding-bottom: 20px;
+}
+
+.top h2 {
+    font-size: 3vw;
+    font-weight: 800;
+    font-family: "Urbanist";
+    padding-bottom: 20px;
+}
+
+.top2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.top2 h3 {
+    font-size: 1vw;
+    color: #171010;
+    font-family: "Urbanist";
+    font-weight: 400;
+    width: 22%;
+}
+
+.h3 {
+    font-family: "fonts/Noto_Sans_KR" !important;
+}
+
+.avter-main {
+    display: flex;
+    white-space: nowrap;
+    gap: 200px;
+    overflow: hidden;
+    padding-top: 50px;
+}
+
+.avter {
+    display: flex;
+    white-space: nowrap;
+}
+
+.avter img {
+    width: 420px;
+}
+
+
+.avter {
+    font-weight: 400;
+    animation-name: scroll;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+.page6 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding-top: 200px;
+    background: linear-gradient(70deg, #101010, #343434);
+    border-bottom: 1px dashed #777;
+}
+
+
+
+.page6-text h2 {
+    font-size: 2vw;
+    color: white;
+    font-family: "Urbanist";
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.page6-text p {
+    font-size: 15px;
+    font-family: "Urbanist";
+
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.page6-flex {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 20px;
+    padding-top: 100px;
+}
+
+.page6-box {
+    width: 439px;
+    background-color: white;
+    height: 160px;
+    display: flex;
+    padding: 1.5rem 2rem;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    border-radius: 20px;
+}
+
+.page6-box2 {
+    width: 439px;
+    background-color: white;
+    height: 221px;
+    display: flex;
+    padding: 1.5rem 2rem;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    border-radius: 20px;
+}
+
+
+.page6-box h6 {
+    font-size: 12px;
+    font-family: "Urbanist";
+    padding-bottom: 7px;
+}
+
+.page6-box h4 {
+    font-size: 22px;
+    font-family: "Urbanist";
+    padding-bottom: 15px;
+}
+
+.page6-box2 h6 {
+    font-size: 12px;
+    font-family: "Urbanist";
+    padding-bottom: 7px;
+}
+
+.page6-box2 h4 {
+    font-size: 22px;
+    font-family: "Urbanist";
+    padding-bottom: 15px;
+}
+
+.page6-h6 {
+    font-size: 15px !important;
+    font-family: "Urbanist" !important;
+    color: #585353 !important;
+    padding-bottom: 7px;
+}
+
+.page6-h66 {
+    font-size: 15px !important;
+    font-family: "fonts/Noto_Sans_KR" !important;
+    color: #585353 !important;
+}
+
+.page6-flex1 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.page7 {
+    width: 100%;
+    height: 150vh;
+    position: relative;
+    background: linear-gradient(70deg, #101010, #343434);
+}
+
+.page7-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 200px;
+}
+
+.page7-text h2 {
+    font-size: 2vw;
+    color: white;
+    font-family: "Urbanist";
+    padding-bottom: 7px;
+}
+
+.page7-text p {
+    font-size: 15px;
+    font-family: "Urbanist";
+    color: white;
+    font-weight: 400;
+}
+
+#loopp2 {
+    display: flex;
+    white-space: nowrap;
+    overflow-y: auto;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    font-size: 100px;
+}
+
+#loopp2::-webkit-scrollbar {
+    display: none;
+}
+
+.rap2 {
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    animation-name: scroll;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+
+
+
+
+.rap2>h2 {
+    font-weight: 400;
+    font-family: "Urbanist";
+    -webkit-text-stroke: 1.2px #fff;
+    color: transparent;
+
+
+}
+
+.rap2>h2>span {
+    -webkit-text-stroke: 1.2px #fff;
+    color: transparent;
+    font-weight: 500;
+    font-family: "Urbanist";
+}
+
+
+#loop3 {
+    display: flex;
+    overflow-y: auto;
+    white-space: nowrap;
+    position: absolute;
+    top: 55%;
+    width: 100%;
+    font-size: 100px;
+}
+
+#loop3::-webkit-scrollbar {
+    display: none;
+}
+
+#loop3>h2 {
+    font-weight: 400;
+
+    font-family: "Urbanist";
+    -webkit-text-stroke: 1.2px #fff;
+    color: transparent;
+
+
+}
+
+#loop3>h2>span {
+    -webkit-text-stroke: 1.2px #fff;
+    color: transparent;
+    font-weight: 500;
+    font-family: "Urbanist";
+}
+
+
+#loop4 {
+    display: flex;
+    overflow-y: auto;
+    white-space: nowrap;
+    position: absolute;
+    top: 75%;
+    width: 100%;
+    font-size: 100px;
+}
+
+#loop4::-webkit-scrollbar {
+    display: none;
+}
+
+#loop4>h2 {
+    font-weight: 400;
+
+    font-family: "Urbanist";
+    -webkit-text-stroke: 1.2px #fff;
+    color: transparent;
+
+
+}
+
+#loop4>h2>span {
+    -webkit-text-stroke: 1.2px #fff;
+    color: transparent;
+    font-weight: 500;
+    font-family: "Urbanist";
+}
+
+.page7-img {
+    position: absolute;
+    bottom: -1%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.page7-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.page8 {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background: linear-gradient(70deg, #101010, #343434);
+}
+
+.page8-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+
+.page8-text h3 {
+    color: white;
+    font-size: 20px;
+    font-family: "Urbanist";
+    padding-bottom: 10px;
+}
+
+.page8-text h5 {
+    color: white;
+    font-size: 14px;
+    font-family: "Urbanist";
+}
+
+.page8-text p {
+    font-family: "Urbanist";
+    color: white;
+    font-size: 15px;
+    width: 38%;
+    padding: 10px 0px;
+}
+
+.divider1 {
+    width: 50%;
+    border-right: 1px solid white;
+    height: 200px;
+    margin-top: 100px;
+}
+
+.divider2 {
+    width: 50%;
+    height: 200px;
+    margin-top: 100px;
+}
+
+.divider-div {
+    width: 100%;
+    display: flex;
+}
+
+.page9 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 100px;
+    width: 100%;
+    height: auto;
+}
+
+.page9 h6 {
+    color: white;
+    font-size: 16px;
+    font-family: "Urbanist";
+    padding-bottom: 20px;
+}
+
+.page9 h2 {
+    font-size: 3vw;
+    color: white;
+    font-family: "Urbanist";
+    line-height: 1.5;
+}
+
+.page9-text {
+    display: flex;
+    width: 50%;
+    gap: 20px;
+}
+
+.page9-text p {
+    font-family: "Urbanist";
+    color: white;
+    font-size: 15x;
+    width: 50%;
+    padding: 10px 0px;
+}
+
+.page10 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.border-main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 100px;
+}
+
+.border {
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    color: white;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page10 h2 {
+    font-size: 10vw;
+    color: transparent;
+    font-family: "Urbanist";
+
+    -webkit-text-stroke: 1.2px #fff;
+
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.footer h6 {
+    font-size: 15px;
+    font-family: "Urbanist";
+    color: white;
+    font-weight: 400;
+}
+
+.footer i {
+    font-size: 25px;
+    color: white;
+    padding-bottom: 10px;
+}
